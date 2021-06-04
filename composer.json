@@ -1,0 +1,16 @@
+{
+  "name": "4slovo/s3client",
+  "description": "Simple S3 client",
+  "minimum-stability": "stable",
+  "keywords": ["s3 client"],
+  "require": {
+    "php" : ">=5.3.3",
+    "aws/aws-sdk-php" : "2.8.31",
+    "ext-curl": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Chslovo\\S3\\": "src"
+    }
+  }
+}
