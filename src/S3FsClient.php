@@ -43,7 +43,7 @@ class S3FsClient
      * @param string $secretKey секретный ключ
      * @param string $bucket ведро (имя хранилища)
      */
-    public function __construct($endpoint, $accessKey, $secretKey, $bucket = 'fs')
+    public function __construct($endpoint, $accessKey, $secretKey, $bucket = 'file-server')
     {
         $this->endpoint = $endpoint;
         $this->accessKey = $accessKey;
