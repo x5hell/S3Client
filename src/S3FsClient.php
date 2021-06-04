@@ -3,13 +3,7 @@
 
 namespace Chslovo\S3;
 
-/*
- * Клиент для работы с файловым хранилищем S3.
- * Интерфейс полностью соответствует файловому сереру
- * (сигнатура методов download, delete, upload идентична),
- * поэтому можно безболезненно заменять файловый сервер на S3FsClient
- */
-
+use Aws\S3\Exception\NoSuchKeyException;
 use Aws\S3\S3Client;
 
 class S3FsClient
@@ -94,6 +88,7 @@ class S3FsClient
      * @param string $hash хеш файла
      * @param string $savePath путь для сохранения файла
      * @return string содержимое файла
+     * @throws NoSuchKeyException
      */
     public function download($hash, $savePath = null)
     {
